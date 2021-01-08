@@ -21,7 +21,7 @@ export const terminalConfiguration: IConfigurationNode = {
 				comment: ['{0} and {1} are the `shell` and `shellArgs` settings keys']
 			}, "A path that when set will override {0} and ignore {1} values for automation-related terminal usage like tasks and debug.", '`terminal.integrated.shell.linux`', '`shellArgs`'),
 			type: ['string', 'null'],
-			default: null
+			default: 'null'
 		},
 		'terminal.integrated.automationShell.osx': {
 			markdownDescription: localize({
@@ -400,7 +400,7 @@ export function getTerminalShellConfiguration(getSystemShell?: (p: Platform) => 
 						? localize('terminal.integrated.shell.linux', "The path of the shell that the terminal uses on Linux (default: {0}). [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).", getSystemShell(Platform.Linux))
 						: localize('terminal.integrated.shell.linux.noDefault', "The path of the shell that the terminal uses on Linux. [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration)."),
 				type: ['string', 'null'],
-				default: null
+				default: '/bin/bash'
 			},
 			'terminal.integrated.shell.osx': {
 				markdownDescription:
