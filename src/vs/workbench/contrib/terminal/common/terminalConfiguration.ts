@@ -21,7 +21,7 @@ export const terminalConfiguration: IConfigurationNode = {
 				comment: ['{0} and {1} are the `shell` and `shellArgs` settings keys']
 			}, "A path that when set will override {0} and ignore {1} values for automation-related terminal usage like tasks and debug.", '`terminal.integrated.shell.linux`', '`shellArgs`'),
 			type: ['string', 'null'],
-			default: 'null'
+			default: null
 		},
 		'terminal.integrated.automationShell.osx': {
 			markdownDescription: localize({
