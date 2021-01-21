@@ -150,7 +150,7 @@ export abstract class BaseWebview<T extends HTMLElement> extends Disposable {
 		}));
 
 		this._register(this.on<{ message: string }>(WebviewMessageChannels.fatalError, (e) => {
-			notificationService.error(localize('fatalErrorMessage', "Error loading webview: {0}", e.message));
+			// notificationService.error(localize('fatalErrorMessage', "Error loading webview: {0}", e.message));
 		}));
 
 		this._register(this.on('did-keydown', (data: KeyboardEvent) => {
